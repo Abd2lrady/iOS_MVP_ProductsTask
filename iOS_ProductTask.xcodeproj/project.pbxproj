@@ -12,6 +12,9 @@
 		B4071B322853446900F6152C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4071B312853446900F6152C /* ViewController.swift */; };
 		B4071B372853446A00F6152C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4071B362853446A00F6152C /* Assets.xcassets */; };
 		B4071B3A2853446A00F6152C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4071B382853446A00F6152C /* LaunchScreen.storyboard */; };
+		B4071B4928534D4900F6152C /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4071B4828534D4900F6152C /* RouterProtocol.swift */; };
+		B4071B4B28534ECD00F6152C /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4071B4A28534ECD00F6152C /* Router.swift */; };
+		B4071B4D28534F0800F6152C /* Router+RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4071B4C28534F0800F6152C /* Router+RouterProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		B4071B362853446A00F6152C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4071B392853446A00F6152C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B4071B3B2853446A00F6152C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4071B4828534D4900F6152C /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
+		B4071B4A28534ECD00F6152C /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		B4071B4C28534F0800F6152C /* Router+RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Router+RouterProtocol.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +63,7 @@
 				B4071B41285346DC00F6152C /* App Delegate + Scene Delegate */,
 				B4071B422853470B00F6152C /* StoryBoard */,
 				B4071B432853471700F6152C /* Resources */,
+				B4071B4728534D3800F6152C /* Router */,
 				B4071B462853478E00F6152C /* Custom */,
 				B4071B452853473700F6152C /* Scenes */,
 			);
@@ -110,6 +117,16 @@
 			children = (
 			);
 			path = Custom;
+			sourceTree = "<group>";
+		};
+		B4071B4728534D3800F6152C /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				B4071B4828534D4900F6152C /* RouterProtocol.swift */,
+				B4071B4A28534ECD00F6152C /* Router.swift */,
+				B4071B4C28534F0800F6152C /* Router+RouterProtocol.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,6 +201,9 @@
 			files = (
 				B4071B322853446900F6152C /* ViewController.swift in Sources */,
 				B4071B2E2853446900F6152C /* AppDelegate.swift in Sources */,
+				B4071B4B28534ECD00F6152C /* Router.swift in Sources */,
+				B4071B4D28534F0800F6152C /* Router+RouterProtocol.swift in Sources */,
+				B4071B4928534D4900F6152C /* RouterProtocol.swift in Sources */,
 				B4071B302853446900F6152C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
