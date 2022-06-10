@@ -9,6 +9,8 @@ import Foundation
 
 protocol CoordinatorProtocol: AnyObject {
     var childCoordinators: [CoordinatorProtocol] { get set }
+    var parentCoordinator: CoordinatorProtocol? { get set }
+
     
     func start()
     func removeChild(coordinator: CoordinatorProtocol)
