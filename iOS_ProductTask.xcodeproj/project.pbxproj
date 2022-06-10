@@ -20,6 +20,7 @@
 		B4071B552853508600F6152C /* AppCoordinator+CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4071B542853508600F6152C /* AppCoordinator+CoordinatorProtocol.swift */; };
 		B4071B58285351A300F6152C /* SceneDelegate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4071B57285351A300F6152C /* SceneDelegate+Extension.swift */; };
 		B4071B5E2853A2F700F6152C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4071B5D2853A2F700F6152C /* Constants.swift */; };
+		B4071B612853AA3B00F6152C /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4071B602853AA3B00F6152C /* Product.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		B4071B542853508600F6152C /* AppCoordinator+CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppCoordinator+CoordinatorProtocol.swift"; sourceTree = "<group>"; };
 		B4071B57285351A300F6152C /* SceneDelegate+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SceneDelegate+Extension.swift"; sourceTree = "<group>"; };
 		B4071B5D2853A2F700F6152C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B4071B602853AA3B00F6152C /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				B4071B4E28534F8D00F6152C /* AppCoordinator */,
 				B4071B4728534D3800F6152C /* Router */,
 				B4071B462853478E00F6152C /* Custom */,
+				B4071B5F2853AA2300F6152C /* Model */,
 				B4071B452853473700F6152C /* Scenes */,
 			);
 			path = iOS_ProductTask;
@@ -176,6 +179,14 @@
 			path = Api;
 			sourceTree = "<group>";
 		};
+		B4071B5F2853AA2300F6152C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B4071B602853AA3B00F6152C /* Product.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -251,6 +262,7 @@
 				B4071B322853446900F6152C /* ViewController.swift in Sources */,
 				B4071B2E2853446900F6152C /* AppDelegate.swift in Sources */,
 				B4071B4B28534ECD00F6152C /* Router.swift in Sources */,
+				B4071B612853AA3B00F6152C /* Product.swift in Sources */,
 				B4071B532853505700F6152C /* AppCoordinator.swift in Sources */,
 				B4071B4D28534F0800F6152C /* Router+RouterProtocol.swift in Sources */,
 				B4071B4928534D4900F6152C /* RouterProtocol.swift in Sources */,
