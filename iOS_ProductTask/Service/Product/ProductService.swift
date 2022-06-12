@@ -9,7 +9,7 @@ import Foundation
 
 class ProductService: ProductGateway {
     
-    func getProducts(completionHandler: @escaping (Result<[Product], Error>) -> Void) {
+    func getProducts(completionHandler: @escaping (Result<[Product], ProductServiceError>) -> Void) {
         
     }
     

@@ -8,6 +8,11 @@
 import Foundation
 
 enum NetworkError: Error {
-    case badUrl
-    case badResponse
+    case invalidUrl
+    case notConnected
+    case invalidData
+    case invalidRequest(statusCode: Int)
+    case serverError(statusCode: Int)
+    case unknownError(error: Error)
+    case unknownResponse(response: URLResponse)
 }

@@ -30,17 +30,33 @@ class ViewController: UIViewController {
 //                        print(error)
 //                    }
 //                }.resume()
-        NetworkManager.shared.request(target: ProductTarget.getProducts) { result in
+//        NetworkManager.shared.request(target: ProductTarget.getProducts) { result in
+//            switch result {
+//            case .failure(let error):
+//                print(error)
+//            case .success(let data):
+//                do {
+//                    let products =  try JSONDecoder().decode([Product].self, from: data)
+//                    print(products)
+//                } catch (let error){
+//                    print(error)
+//                }
+//            }
+//        }
+        
+        RemoteProductService().getProducts { result in
             switch result {
             case .failure(let error):
-                print(error.localizedDescription)
-            case .success(let data):
-                do {
-                    let products =  try JSONDecoder().decode([Product].self, from: data)
-                    print(products)
-                } catch {
+                switch error {
+                case .network(let error):
+                    print("catched network error")
+                    print(error)
+                case .parse(let error):
+                    print("catched parse error")
                     print(error)
                 }
+            case .success(let products):
+                print(products.count)
             }
         }
     }

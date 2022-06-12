@@ -28,6 +28,7 @@
 		B441D14D2855C9950042181C /* RemoteProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B441D14A2855C9950042181C /* RemoteProductService.swift */; };
 		B441D14E2855C9950042181C /* ProductTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B441D14B2855C9950042181C /* ProductTarget.swift */; };
 		B441D14F2855C9950042181C /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B441D14C2855C9950042181C /* ProductService.swift */; };
+		B441D1512855FB890042181C /* ProductServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B441D1502855FB890042181C /* ProductServiceError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		B441D14A2855C9950042181C /* RemoteProductService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteProductService.swift; sourceTree = "<group>"; };
 		B441D14B2855C9950042181C /* ProductTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductTarget.swift; sourceTree = "<group>"; };
 		B441D14C2855C9950042181C /* ProductService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
+		B441D1502855FB890042181C /* ProductServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductServiceError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +245,7 @@
 			children = (
 				B441D1492855C9950042181C /* RemoteProduct */,
 				B441D14C2855C9950042181C /* ProductService.swift */,
+				B441D1502855FB890042181C /* ProductServiceError.swift */,
 			);
 			path = Product;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B441D1512855FB890042181C /* ProductServiceError.swift in Sources */,
 				B4071B5E2853A2F700F6152C /* Constants.swift in Sources */,
 				B4071B512853504100F6152C /* CoordinatorProtocol.swift in Sources */,
 				B441D14E2855C9950042181C /* ProductTarget.swift in Sources */,
