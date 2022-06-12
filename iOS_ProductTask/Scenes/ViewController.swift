@@ -17,19 +17,32 @@ class ViewController: UIViewController {
     }
 
     func test() {
-        let url = URL(string: Constants.Api.baseURL + Constants.Api.path)!
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            guard let data = data else {
-                return
+//                let url = URL(string: "https://api.jsonserve.com/3wPBqi")!
+//                URLSession.shared.dataTask(with: url) { data, response, error in
+//                    guard let data = data else {
+//                        return
+//                    }
+//                    do {
+//
+//                        let products =  try JSONDecoder().decode([Product].self, from: data)
+//                        print(products)
+//                    } catch {
+//                        print(error)
+//                    }
+//                }.resume()
+        NetworkManager.shared.request(target: ProductTarget.getProducts) { result in
+            switch result {
+            case .failure(let error):
+                print(error.localizedDescription)
+            case .success(let data):
+                do {
+                    let products =  try JSONDecoder().decode([Product].self, from: data)
+                    print(products)
+                } catch {
+                    print(error)
+                }
             }
-            do {
-                
-                let products =  try JSONDecoder().decode([Product].self, from: data)
-                print(products)
-            } catch {
-                print(error)
-            }
-        }.resume()
+        }
     }
 }
 

@@ -11,7 +11,7 @@ enum Constants {
     
     enum Api {
     
-        static let baseURL = "https://api.jsonserve.com"
+        static let baseURL = "api.jsonserve.com"
         static let path = "/3wPBqi"
     }
     
