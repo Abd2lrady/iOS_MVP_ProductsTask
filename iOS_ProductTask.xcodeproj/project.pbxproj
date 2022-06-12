@@ -25,6 +25,9 @@
 		B441D13C2854BDAD0042181C /* NetworkTargetProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B441D13B2854BDAD0042181C /* NetworkTargetProtocol.swift */; };
 		B441D1442854C0CC0042181C /* NetworkManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B441D1432854C0CC0042181C /* NetworkManger.swift */; };
 		B441D1462854C6E40042181C /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B441D1452854C6E40042181C /* NetworkError.swift */; };
+		B441D14D2855C9950042181C /* RemoteProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B441D14A2855C9950042181C /* RemoteProductService.swift */; };
+		B441D14E2855C9950042181C /* ProductTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B441D14B2855C9950042181C /* ProductTarget.swift */; };
+		B441D14F2855C9950042181C /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B441D14C2855C9950042181C /* ProductService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +51,9 @@
 		B441D13B2854BDAD0042181C /* NetworkTargetProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTargetProtocol.swift; sourceTree = "<group>"; };
 		B441D1432854C0CC0042181C /* NetworkManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManger.swift; sourceTree = "<group>"; };
 		B441D1452854C6E40042181C /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		B441D14A2855C9950042181C /* RemoteProductService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteProductService.swift; sourceTree = "<group>"; };
+		B441D14B2855C9950042181C /* ProductTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductTarget.swift; sourceTree = "<group>"; };
+		B441D14C2855C9950042181C /* ProductService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +94,7 @@
 				B4071B4728534D3800F6152C /* Router */,
 				B4071B462853478E00F6152C /* Custom */,
 				B441D1362854B6910042181C /* Manager */,
+				B441D1472855C9950042181C /* Service */,
 				B4071B5F2853AA2300F6152C /* Model */,
 				B4071B452853473700F6152C /* Scenes */,
 			);
@@ -223,6 +230,32 @@
 			path = NetworkManager;
 			sourceTree = "<group>";
 		};
+		B441D1472855C9950042181C /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B441D1482855C9950042181C /* Product */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		B441D1482855C9950042181C /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				B441D1492855C9950042181C /* RemoteProduct */,
+				B441D14C2855C9950042181C /* ProductService.swift */,
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
+		B441D1492855C9950042181C /* RemoteProduct */ = {
+			isa = PBXGroup;
+			children = (
+				B441D14A2855C9950042181C /* RemoteProductService.swift */,
+				B441D14B2855C9950042181C /* ProductTarget.swift */,
+			);
+			path = RemoteProduct;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -295,7 +328,10 @@
 			files = (
 				B4071B5E2853A2F700F6152C /* Constants.swift in Sources */,
 				B4071B512853504100F6152C /* CoordinatorProtocol.swift in Sources */,
+				B441D14E2855C9950042181C /* ProductTarget.swift in Sources */,
 				B4071B322853446900F6152C /* ViewController.swift in Sources */,
+				B441D14F2855C9950042181C /* ProductService.swift in Sources */,
+				B441D14D2855C9950042181C /* RemoteProductService.swift in Sources */,
 				B441D1352854B55A0042181C /* ProductGateway.swift in Sources */,
 				B441D1442854C0CC0042181C /* NetworkManger.swift in Sources */,
 				B4071B2E2853446900F6152C /* AppDelegate.swift in Sources */,
