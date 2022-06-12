@@ -28,6 +28,7 @@ extension ProductsListPresenter: ProductsListPresenterProtocol {
                 switch error {
                 case .network(let error):
                     print("catched network error")
+                    self?.view?.getError(error: error)
                     print(error)
                 case .parse(let error):
                     print("catched parse error")

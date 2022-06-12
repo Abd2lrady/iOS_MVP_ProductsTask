@@ -44,6 +44,7 @@
 		B441D177285690AF0042181C /* UIViewExtension+Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = B441D176285690AF0042181C /* UIViewExtension+Design.swift */; };
 		B441D179285690DC0042181C /* UIImage+LoadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B441D178285690DC0042181C /* UIImage+LoadImage.swift */; };
 		B441D17C2856985B0042181C /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B441D17B2856985B0042181C /* ImageCacheManager.swift */; };
+		B441D17E2856A72E0042181C /* UIView+ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B441D17D2856A72E0042181C /* UIView+ActivityIndicator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +87,7 @@
 		B441D176285690AF0042181C /* UIViewExtension+Design.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewExtension+Design.swift"; sourceTree = "<group>"; };
 		B441D178285690DC0042181C /* UIImage+LoadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+LoadImage.swift"; sourceTree = "<group>"; };
 		B441D17B2856985B0042181C /* ImageCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
+		B441D17D2856A72E0042181C /* UIView+ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ActivityIndicator.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -379,6 +381,7 @@
 			isa = PBXGroup;
 			children = (
 				B441D176285690AF0042181C /* UIViewExtension+Design.swift */,
+				B441D17D2856A72E0042181C /* UIView+ActivityIndicator.swift */,
 				B441D178285690DC0042181C /* UIImage+LoadImage.swift */,
 			);
 			path = Extension;
@@ -487,6 +490,7 @@
 				B441D17C2856985B0042181C /* ImageCacheManager.swift in Sources */,
 				B441D15C28560D140042181C /* ReuseID.swift in Sources */,
 				B441D1732856778B0042181C /* ProductListCVDataSource.swift in Sources */,
+				B441D17E2856A72E0042181C /* UIView+ActivityIndicator.swift in Sources */,
 				B4071B4D28534F0800F6152C /* Router+RouterProtocol.swift in Sources */,
 				B4071B4928534D4900F6152C /* RouterProtocol.swift in Sources */,
 				B4071B58285351A300F6152C /* SceneDelegate+Extension.swift in Sources */,

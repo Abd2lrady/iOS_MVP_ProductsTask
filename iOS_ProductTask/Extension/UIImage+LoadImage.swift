@@ -20,7 +20,7 @@ extension UIImageView {
             guard let url = URL(string: url),
                   let imgData = try? Data(contentsOf: url)
             else {
-                print("error")
+                print("load image error")
                     return
                 }
         

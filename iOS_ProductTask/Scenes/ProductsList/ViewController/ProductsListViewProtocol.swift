@@ -8,6 +8,6 @@
 import Foundation
 
 protocol ProductsListViewProtocol: AnyObject {
-    var presenter: ProductsListPresenterProtocol! { get }
     func productsFetched()
+    func getError(error: Error)
 }

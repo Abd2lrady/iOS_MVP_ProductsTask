@@ -26,11 +26,6 @@ class ProductsListVC: UIViewController {
         presenter.viewLoaded()
         showIndicator()
     }
-    @IBAction func btnTapped(_ sender: Any) {
-        print("tapped")
-        pic.image = nil
-        pic.loadImage(from: "https://i.picsum.photos/id/62/150/308.jpg?hmac=v--t36mvaUNgPphIzLhhqYT3ShCWMZ51V358xiX8dO4")
-    }
 }
 
 extension ProductsListVC {
@@ -42,11 +37,15 @@ extension ProductsListVC {
     }
     
     func showIndicator() {
-        print("showIndicator")
+        DispatchQueue.main.async {
+            self.view.showActivityIndicator()
+        }
     }
     
     func hideIndicator() {
-        print("hideIndicator")
+        DispatchQueue.main.async {
+            self.view.hideActivityIndicator()
+        }
     }
 }
 
@@ -56,6 +55,9 @@ extension ProductsListVC: ProductsListViewProtocol {
        
         print("product fetched")
         //productsListCVDataSource.products = presenter.
-        hideIndicator()
+    }
+    
+    func getError(error: Error) {
+        //hideIndicator()
     }
 }
