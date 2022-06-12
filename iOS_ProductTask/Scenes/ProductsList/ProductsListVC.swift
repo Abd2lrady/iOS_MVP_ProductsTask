@@ -7,12 +7,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ProductsListVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        view.backgroundColor = .blue
+        //view.backgroundColor = .blue
         test()
     }
 

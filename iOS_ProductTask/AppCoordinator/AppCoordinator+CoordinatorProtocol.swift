@@ -13,7 +13,7 @@ extension AppCoordinator: CoordinatorProtocol {
         
         let navigator = UINavigationController()
         let router = Router(navigator: navigator)
-        let viewController = ViewController()
+        let viewController = ProductsListVC()
         
         router.push(view: viewController, animated: true)
 
