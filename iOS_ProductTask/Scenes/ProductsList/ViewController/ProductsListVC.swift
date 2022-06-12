@@ -9,6 +9,9 @@ import UIKit
 
 class ProductsListVC: UIViewController {
 
+    var presenter: ProductsListPresenterProtocol!
+    weak var coordinator: ProductsListCoordinatorProtocol?
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -62,3 +65,10 @@ class ProductsListVC: UIViewController {
     }
 }
 
+extension ProductsListVC: ProductsListViewProtocol {
+    func productsFetched() {
+        
+    }
+    
+    
+}

@@ -34,6 +34,12 @@
 		B441D15928560CA60042181C /* ProductCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B441D15728560CA60042181C /* ProductCVCell.xib */; };
 		B441D15C28560D140042181C /* ReuseID.swift in Sources */ = {isa = PBXBuildFile; fileRef = B441D15B28560D140042181C /* ReuseID.swift */; };
 		B441D15E285615590042181C /* ProductCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B441D15D285615590042181C /* ProductCellModel.swift */; };
+		B441D16128561BA60042181C /* ScreenTitles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B441D16028561BA60042181C /* ScreenTitles.swift */; };
+		B441D16628561C8E0042181C /* ProductsListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B441D16528561C8E0042181C /* ProductsListCoordinator.swift */; };
+		B441D168285625C80042181C /* ProductsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B441D167285625C80042181C /* ProductsListPresenter.swift */; };
+		B441D16A285625E60042181C /* ProductsListPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B441D169285625E60042181C /* ProductsListPresenterProtocol.swift */; };
+		B441D16C285626390042181C /* ProductsListViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B441D16B285626390042181C /* ProductsListViewProtocol.swift */; };
+		B441D16E28562FD10042181C /* ProductsListCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B441D16D28562FD10042181C /* ProductsListCoordinatorProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +72,12 @@
 		B441D15728560CA60042181C /* ProductCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCVCell.xib; sourceTree = "<group>"; };
 		B441D15B28560D140042181C /* ReuseID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseID.swift; sourceTree = "<group>"; };
 		B441D15D285615590042181C /* ProductCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellModel.swift; sourceTree = "<group>"; };
+		B441D16028561BA60042181C /* ScreenTitles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTitles.swift; sourceTree = "<group>"; };
+		B441D16528561C8E0042181C /* ProductsListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsListCoordinator.swift; sourceTree = "<group>"; };
+		B441D167285625C80042181C /* ProductsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsListPresenter.swift; sourceTree = "<group>"; };
+		B441D169285625E60042181C /* ProductsListPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsListPresenterProtocol.swift; sourceTree = "<group>"; };
+		B441D16B285626390042181C /* ProductsListViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsListViewProtocol.swift; sourceTree = "<group>"; };
+		B441D16D28562FD10042181C /* ProductsListCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsListCoordinatorProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +207,7 @@
 		B4071B5B2853A2CB00F6152C /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				B441D15F28561B8B0042181C /* Title */,
 				B441D15A28560CF60042181C /* ReuseID */,
 				B4071B5C2853A2DA00F6152C /* Api */,
 			);
@@ -274,8 +287,9 @@
 		B441D15428560A440042181C /* ProductsList */ = {
 			isa = PBXGroup;
 			children = (
-				B4071B312853446900F6152C /* ProductsListVC.swift */,
-				B441D152285609DE0042181C /* ProductsListVC.xib */,
+				B441D16428561C720042181C /* Coordinator */,
+				B441D16328561C5E0042181C /* Presenter */,
+				B441D16228561C480042181C /* ViewController */,
 			);
 			path = ProductsList;
 			sourceTree = "<group>";
@@ -296,6 +310,42 @@
 				B441D15B28560D140042181C /* ReuseID.swift */,
 			);
 			path = ReuseID;
+			sourceTree = "<group>";
+		};
+		B441D15F28561B8B0042181C /* Title */ = {
+			isa = PBXGroup;
+			children = (
+				B441D16028561BA60042181C /* ScreenTitles.swift */,
+			);
+			path = Title;
+			sourceTree = "<group>";
+		};
+		B441D16228561C480042181C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B4071B312853446900F6152C /* ProductsListVC.swift */,
+				B441D152285609DE0042181C /* ProductsListVC.xib */,
+				B441D16B285626390042181C /* ProductsListViewProtocol.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B441D16328561C5E0042181C /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B441D167285625C80042181C /* ProductsListPresenter.swift */,
+				B441D169285625E60042181C /* ProductsListPresenterProtocol.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B441D16428561C720042181C /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				B441D16528561C8E0042181C /* ProductsListCoordinator.swift */,
+				B441D16D28562FD10042181C /* ProductsListCoordinatorProtocol.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -380,18 +430,24 @@
 				B441D14D2855C9950042181C /* RemoteProductService.swift in Sources */,
 				B441D1352854B55A0042181C /* ProductGateway.swift in Sources */,
 				B441D1442854C0CC0042181C /* NetworkManger.swift in Sources */,
+				B441D16C285626390042181C /* ProductsListViewProtocol.swift in Sources */,
 				B441D15E285615590042181C /* ProductCellModel.swift in Sources */,
+				B441D16A285625E60042181C /* ProductsListPresenterProtocol.swift in Sources */,
 				B4071B2E2853446900F6152C /* AppDelegate.swift in Sources */,
 				B4071B4B28534ECD00F6152C /* Router.swift in Sources */,
 				B441D13C2854BDAD0042181C /* NetworkTargetProtocol.swift in Sources */,
 				B4071B612853AA3B00F6152C /* Product.swift in Sources */,
 				B4071B532853505700F6152C /* AppCoordinator.swift in Sources */,
+				B441D16128561BA60042181C /* ScreenTitles.swift in Sources */,
 				B441D15C28560D140042181C /* ReuseID.swift in Sources */,
 				B4071B4D28534F0800F6152C /* Router+RouterProtocol.swift in Sources */,
 				B4071B4928534D4900F6152C /* RouterProtocol.swift in Sources */,
 				B4071B58285351A300F6152C /* SceneDelegate+Extension.swift in Sources */,
 				B4071B552853508600F6152C /* AppCoordinator+CoordinatorProtocol.swift in Sources */,
+				B441D168285625C80042181C /* ProductsListPresenter.swift in Sources */,
 				B4071B302853446900F6152C /* SceneDelegate.swift in Sources */,
+				B441D16628561C8E0042181C /* ProductsListCoordinator.swift in Sources */,
+				B441D16E28562FD10042181C /* ProductsListCoordinatorProtocol.swift in Sources */,
 				B441D1462854C6E40042181C /* NetworkError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
