@@ -43,6 +43,7 @@
 		B441D1732856778B0042181C /* ProductListCVDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B441D1722856778B0042181C /* ProductListCVDataSource.swift */; };
 		B441D177285690AF0042181C /* UIViewExtension+Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = B441D176285690AF0042181C /* UIViewExtension+Design.swift */; };
 		B441D179285690DC0042181C /* UIImage+LoadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B441D178285690DC0042181C /* UIImage+LoadImage.swift */; };
+		B441D17C2856985B0042181C /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B441D17B2856985B0042181C /* ImageCacheManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +85,7 @@
 		B441D1722856778B0042181C /* ProductListCVDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListCVDataSource.swift; sourceTree = "<group>"; };
 		B441D176285690AF0042181C /* UIViewExtension+Design.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewExtension+Design.swift"; sourceTree = "<group>"; };
 		B441D178285690DC0042181C /* UIImage+LoadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+LoadImage.swift"; sourceTree = "<group>"; };
+		B441D17B2856985B0042181C /* ImageCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,6 +251,7 @@
 		B441D1362854B6910042181C /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				B441D17A2856982B0042181C /* CacheManager */,
 				B441D1372854B6CE0042181C /* NetworkManager */,
 			);
 			path = Manager;
@@ -381,6 +384,14 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		B441D17A2856982B0042181C /* CacheManager */ = {
+			isa = PBXGroup;
+			children = (
+				B441D17B2856985B0042181C /* ImageCacheManager.swift */,
+			);
+			path = CacheManager;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -473,6 +484,7 @@
 				B4071B612853AA3B00F6152C /* Product.swift in Sources */,
 				B4071B532853505700F6152C /* AppCoordinator.swift in Sources */,
 				B441D16128561BA60042181C /* ScreenTitles.swift in Sources */,
+				B441D17C2856985B0042181C /* ImageCacheManager.swift in Sources */,
 				B441D15C28560D140042181C /* ReuseID.swift in Sources */,
 				B441D1732856778B0042181C /* ProductListCVDataSource.swift in Sources */,
 				B4071B4D28534F0800F6152C /* Router+RouterProtocol.swift in Sources */,

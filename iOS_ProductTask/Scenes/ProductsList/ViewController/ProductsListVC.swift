@@ -26,6 +26,11 @@ class ProductsListVC: UIViewController {
         presenter.viewLoaded()
         showIndicator()
     }
+    @IBAction func btnTapped(_ sender: Any) {
+        print("tapped")
+        pic.image = nil
+        pic.loadImage(from: "https://i.picsum.photos/id/62/150/308.jpg?hmac=v--t36mvaUNgPphIzLhhqYT3ShCWMZ51V358xiX8dO4")
+    }
 }
 
 extension ProductsListVC {
