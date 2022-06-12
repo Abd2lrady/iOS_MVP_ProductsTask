@@ -9,16 +9,35 @@ import Foundation
 
 class ProductsListPresenter {
     weak var view: ProductsListViewProtocol?
-    
-    init(view: ProductsListViewProtocol) {
+    let productService: ProductGateway
+    var products = [Product]()
+        
+    init(view: ProductsListViewProtocol,
+         productService: ProductGateway) {
         self.view = view
+        self.productService = productService
     }
 }
 
 extension ProductsListPresenter: ProductsListPresenterProtocol {
         
     func viewLoaded() {
-         
+        productService.getProducts { [weak self] result in
+            switch result {
+            case .failure(let error):
+                switch error {
+                case .network(let error):
+                    print("catched network error")
+                    print(error)
+                case .parse(let error):
+                    print("catched parse error")
+                    print(error)
+                }
+            case .success(let products):
+                print(products.count)
+                self?.view?.productsFetched()
+            }
+        }
     }
     
     

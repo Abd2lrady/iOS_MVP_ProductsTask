@@ -25,11 +25,13 @@ extension ProductsListCoordinator: CoordinatorProtocol {
     func start() {
         let productsListVC = ProductsListVC()
         productsListVC.coordinator = self
-        let productsListPresenter = ProductsListPresenter(view: productsListVC)
+        productsListVC.title = ScreenTitles.productList
+        let productService: ProductGateway = RemoteProductService()
+        let productsListPresenter = ProductsListPresenter(view: productsListVC,
+                                                          productService: productService)
         productsListVC.presenter = productsListPresenter
         
-        productsListVC.title = ScreenTitles.productList
-        
+
         router.push(view: productsListVC,
                     animated: true)
         
