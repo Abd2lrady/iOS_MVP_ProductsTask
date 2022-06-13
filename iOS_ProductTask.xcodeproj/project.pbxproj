@@ -25,6 +25,8 @@
 		B43F986F28573B0200BF1E50 /* AdaptiveUICollectionViewLayoutProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43F986E28573B0200BF1E50 /* AdaptiveUICollectionViewLayoutProtocol.swift */; };
 		B43F98712857410B00BF1E50 /* ProductListVC+ProductsListCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43F98702857410B00BF1E50 /* ProductListVC+ProductsListCV.swift */; };
 		B43F987628578B4700BF1E50 /* ProductImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43F987528578B4700BF1E50 /* ProductImageService.swift */; };
+		B43F987F2857C5B100BF1E50 /* ProductDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43F987D2857C5B100BF1E50 /* ProductDetailsVC.swift */; };
+		B43F98802857C5B100BF1E50 /* ProductDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B43F987E2857C5B100BF1E50 /* ProductDetailsVC.xib */; };
 		B441D1352854B55A0042181C /* ProductGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = B441D1342854B55A0042181C /* ProductGateway.swift */; };
 		B441D13C2854BDAD0042181C /* NetworkTargetProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B441D13B2854BDAD0042181C /* NetworkTargetProtocol.swift */; };
 		B441D1442854C0CC0042181C /* NetworkManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B441D1432854C0CC0042181C /* NetworkManger.swift */; };
@@ -71,6 +73,8 @@
 		B43F986E28573B0200BF1E50 /* AdaptiveUICollectionViewLayoutProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptiveUICollectionViewLayoutProtocol.swift; sourceTree = "<group>"; };
 		B43F98702857410B00BF1E50 /* ProductListVC+ProductsListCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductListVC+ProductsListCV.swift"; sourceTree = "<group>"; };
 		B43F987528578B4700BF1E50 /* ProductImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImageService.swift; sourceTree = "<group>"; };
+		B43F987D2857C5B100BF1E50 /* ProductDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsVC.swift; sourceTree = "<group>"; };
+		B43F987E2857C5B100BF1E50 /* ProductDetailsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductDetailsVC.xib; sourceTree = "<group>"; };
 		B441D1342854B55A0042181C /* ProductGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductGateway.swift; sourceTree = "<group>"; };
 		B441D13B2854BDAD0042181C /* NetworkTargetProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTargetProtocol.swift; sourceTree = "<group>"; };
 		B441D1432854C0CC0042181C /* NetworkManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManger.swift; sourceTree = "<group>"; };
@@ -181,6 +185,7 @@
 		B4071B452853473700F6152C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				B43F98782857C52300BF1E50 /* ProductDetails */,
 				B441D15428560A440042181C /* ProductsList */,
 			);
 			path = Scenes;
@@ -263,6 +268,31 @@
 				B43F987528578B4700BF1E50 /* ProductImageService.swift */,
 			);
 			path = ProductImage;
+			sourceTree = "<group>";
+		};
+		B43F98782857C52300BF1E50 /* ProductDetails */ = {
+			isa = PBXGroup;
+			children = (
+				B43F98792857C53200BF1E50 /* Presenter */,
+				B43F987A2857C53B00BF1E50 /* ViewController */,
+			);
+			path = ProductDetails;
+			sourceTree = "<group>";
+		};
+		B43F98792857C53200BF1E50 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B43F987A2857C53B00BF1E50 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B43F987D2857C5B100BF1E50 /* ProductDetailsVC.swift */,
+				B43F987E2857C5B100BF1E50 /* ProductDetailsVC.xib */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		B441D1332854B5310042181C /* Product */ = {
@@ -478,6 +508,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B43F98802857C5B100BF1E50 /* ProductDetailsVC.xib in Resources */,
 				B441D15928560CA60042181C /* ProductCVCell.xib in Resources */,
 				B4071B3A2853446A00F6152C /* LaunchScreen.storyboard in Resources */,
 				B441D153285609DE0042181C /* ProductsListVC.xib in Resources */,
@@ -515,6 +546,7 @@
 				B4071B612853AA3B00F6152C /* Product.swift in Sources */,
 				B4071B532853505700F6152C /* AppCoordinator.swift in Sources */,
 				B441D16128561BA60042181C /* ScreenTitles.swift in Sources */,
+				B43F987F2857C5B100BF1E50 /* ProductDetailsVC.swift in Sources */,
 				B441D17C2856985B0042181C /* ImageCacheManager.swift in Sources */,
 				B441D15C28560D140042181C /* ReuseID.swift in Sources */,
 				B441D1732856778B0042181C /* ProductListCVDataSource.swift in Sources */,
