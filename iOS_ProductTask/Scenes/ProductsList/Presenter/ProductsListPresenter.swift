@@ -10,7 +10,7 @@ import Foundation
 class ProductsListPresenter {
     weak var view: ProductsListViewProtocol?
     let productService: ProductGateway
-    var products = [Product]()
+    var products = [Product]() 
         
     init(view: ProductsListViewProtocol,
          productService: ProductGateway) {

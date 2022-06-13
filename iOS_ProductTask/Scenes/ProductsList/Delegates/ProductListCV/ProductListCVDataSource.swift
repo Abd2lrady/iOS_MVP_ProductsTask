@@ -10,6 +10,7 @@ import UIKit
 
 class ProductListCVDataSource: NSObject {
     var products = [Product]()
+    let imageService = ProductImageService()
     
 }
 
@@ -26,8 +27,22 @@ extension ProductListCVDataSource: UICollectionViewDataSource {
                                                             for: indexPath) as? ProductCVCell
         else { fatalError("error deque cell \(ProductCVCell.self)") }
         
-        cell.product = products[indexPath.row]
-        cell.layoutIfNeeded()
+        let product = products[indexPath.row]
+        cell.product = product
+        cell.img.showActivityIndicator()
+        imageService.loadImage(url: product.img?.url ?? "") { result in
+            switch result {
+            case .success(let image):
+                DispatchQueue.main.async {
+                    cell.img.hideActivityIndicator()
+                    cell.img.image = image
+                }
+            case .failure:
+                print("error assigning image to cell")
+            }
+        }
+        
+        cell.layoutSubviews()
         return cell
     }
     

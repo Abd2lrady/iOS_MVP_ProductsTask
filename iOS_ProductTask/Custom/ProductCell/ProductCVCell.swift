@@ -14,7 +14,6 @@ class ProductCVCell: UICollectionViewCell {
         didSet {
             priceLabel.text = "\(product.price?.description ?? "N/A") $ "
             descriptionLabel.text = product.description
-            img.loadImage(from: product.img?.url ?? "")
             imgHeight.constant = CGFloat(integerLiteral: product.img?.height ?? 300)
         }
     }
@@ -31,7 +30,12 @@ class ProductCVCell: UICollectionViewCell {
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         contentView.setCorners(with: 5, corners: [.layerMaxXMaxYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMinXMinYCorner])
-        layoutIfNeeded()
+        layoutSubviews()
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        clear()
     }
     var product: Product {
         get {
@@ -39,6 +43,13 @@ class ProductCVCell: UICollectionViewCell {
         } set {
             _product = newValue
         }
+    }
+    
+    func clear() {
+        img.image = nil
+        descriptionLabel.text = ""
+        priceLabel.text = ""
+        imgHeight.constant = 0
     }
 
 }

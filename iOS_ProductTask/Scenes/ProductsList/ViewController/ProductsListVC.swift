@@ -48,6 +48,7 @@ extension ProductsListVC: ProductsListViewProtocol {
         productsListCVDataSource.products = presenter.products
         DispatchQueue.main.async {
             self.productsListCV.reloadData()
+            self.productsListCV.layoutSubviews()
             self.hideIndicator()
         }
     }
