@@ -10,6 +10,7 @@ import UIKit
 
 class ProductListCVDelegate: NSObject {
     var loadMore: (() -> Void)?
+    var productSelected: ((Int) -> Void)?
 }
 
 extension ProductListCVDelegate: UICollectionViewDelegate {
@@ -17,11 +18,7 @@ extension ProductListCVDelegate: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView,
                         didSelectItemAt indexPath: IndexPath) {
         
-        guard let cell = collectionView.cellForItem(at: indexPath) as? ProductCVCell
-        else { fatalError("can`t get product cell at index \(indexPath.row)")}
-        
-        let product = cell.product
-        print(product)
+        productSelected?(indexPath.item)        
     }
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView,

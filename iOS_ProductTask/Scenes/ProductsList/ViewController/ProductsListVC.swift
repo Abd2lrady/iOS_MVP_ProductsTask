@@ -43,6 +43,10 @@ extension ProductsListVC {
 }
 
 extension ProductsListVC: ProductsListViewProtocol {
+    func navigateToProductDetails(for product: Product) {
+        coordinator?.navigateToProductDetails(for: product)
+    }
+    
     func productsFetched() {
         productsListCVDataSource.products = presenter.products
         DispatchQueue.main.async {
@@ -55,10 +59,5 @@ extension ProductsListVC: ProductsListViewProtocol {
     func getError(error: Error) {
         print(error.localizedDescription)
         hideIndicator()
-    }
-    
-    func loadMore() {
-        view.showActivityIndicator()
-        presenter.loadMore()
     }
 }

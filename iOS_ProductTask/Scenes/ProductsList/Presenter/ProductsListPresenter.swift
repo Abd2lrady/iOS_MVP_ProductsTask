@@ -20,6 +20,10 @@ class ProductsListPresenter {
 }
 
 extension ProductsListPresenter: ProductsListPresenterProtocol {
+    func productSelected(at index: Int) {
+        view?.navigateToProductDetails(for: products[index])
+    }
+    
     func loadMore() {
         loadProducts()
     }

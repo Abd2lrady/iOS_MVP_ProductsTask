@@ -12,4 +12,5 @@ protocol ProductsListPresenterProtocol {
     var products: [Product] { get }
     func viewLoaded()
     func loadMore()
+    func productSelected(at index: Int)
 }

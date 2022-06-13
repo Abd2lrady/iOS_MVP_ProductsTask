@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class ProductsListCoordinator {
     var childCoordinators = [CoordinatorProtocol]()
@@ -39,9 +40,12 @@ extension ProductsListCoordinator: CoordinatorProtocol {
 }
 
 extension ProductsListCoordinator: ProductsListCoordinatorProtocol {
-    func productSelected(index: Int) {
-         
+    func navigateToProductDetails(for product: Product) {
+        print(product)
+        let view = UIViewController()
+        print("navigate to porduct details")
+        router.push(view: view, animated: true)
     }
-    
+
     
 }

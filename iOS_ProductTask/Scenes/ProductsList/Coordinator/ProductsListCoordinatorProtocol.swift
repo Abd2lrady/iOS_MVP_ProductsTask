@@ -8,5 +8,5 @@
 import Foundation
 
 protocol ProductsListCoordinatorProtocol: AnyObject {
-    func productSelected(index: Int)
+    func navigateToProductDetails(for product: Product)
 }
