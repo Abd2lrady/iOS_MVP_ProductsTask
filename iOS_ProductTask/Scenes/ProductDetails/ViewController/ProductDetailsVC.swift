@@ -12,7 +12,7 @@ class ProductDetailsVC: UIViewController {
     @IBOutlet weak var _img: UIImageView!
     @IBOutlet weak var descriptionLabel: UILabel!
     var presenter: ProductDetailsPresenterProtocol!
-    
+    var backButtonTapped: (() -> Void)?
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,6 +43,6 @@ class ProductDetailsVC: UIViewController {
     
     @objc
     private func backButtonAction() {
-        print("hello")
+        backButtonTapped?()
     }
 }

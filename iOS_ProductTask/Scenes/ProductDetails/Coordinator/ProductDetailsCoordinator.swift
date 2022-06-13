@@ -26,8 +26,13 @@ extension ProductDetailsCoordinator: CoordinatorProtocol {
         let view = ProductDetailsVC()
         let presenter = ProductDetailsPresenter(view: view, product: product)
         view.presenter = presenter
+        view.backButtonTapped = backToProductsList
         router.push(view: view, animated: true)
     }
     
+    func backToProductsList() {
+        router.pop(animated: true)
+        parentCoordinator?.removeChild(coordinator: self)
+    }
     
 }
