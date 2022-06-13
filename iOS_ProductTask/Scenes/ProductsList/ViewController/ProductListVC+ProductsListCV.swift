@@ -22,14 +22,16 @@ extension ProductsListVC {
                             bundle: .main)
         productsListCV.register(cellNib,
                                 forCellWithReuseIdentifier: ReuseID.ProductCell)
+        
         productsListCV.delegate = productsListCVDelegate
         productsListCV.dataSource = productsListCVDataSource
+        productsListCVDelegate.loadMore = self.loadMore
         
         if let layout = productsListCV.collectionViewLayout as? AdaptiveUICollectionViewLayout {
             layout.delegate = productsListCVDataSource
         }
 
-        productsListCV.backgroundColor = .clear
+        productsListCV.backgroundColor = .black
     }
     
 }

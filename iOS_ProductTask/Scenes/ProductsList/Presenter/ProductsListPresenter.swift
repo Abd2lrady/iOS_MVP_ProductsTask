@@ -20,8 +20,16 @@ class ProductsListPresenter {
 }
 
 extension ProductsListPresenter: ProductsListPresenterProtocol {
+    func loadMore() {
+        loadProducts()
+    }
+    
         
     func viewLoaded() {
+        loadProducts()
+    }
+    
+    private func loadProducts() {
         productService.getProducts { [weak self] result in
             switch result {
             case .failure(let error):
@@ -35,11 +43,9 @@ extension ProductsListPresenter: ProductsListPresenterProtocol {
                     print(error)
                 }
             case .success(let products):
-                self?.products = products
+                self?.products.append(contentsOf: products)
                 self?.view?.productsFetched()
             }
         }
     }
-    
-    
 }

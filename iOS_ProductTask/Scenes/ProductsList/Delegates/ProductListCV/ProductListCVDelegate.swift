@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 class ProductListCVDelegate: NSObject {
-    
+    var loadMore: (() -> Void)?
 }
 
 extension ProductListCVDelegate: UICollectionViewDelegate {
@@ -22,5 +22,16 @@ extension ProductListCVDelegate: UICollectionViewDelegate {
         
         let product = cell.product
         print(product)
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView,
+                                  willDecelerate decelerate: Bool) {
+        let yOffset = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        let productsCVHeight = scrollView.bounds.height
+        
+        if yOffset > ((contentHeight - productsCVHeight) + 5) {
+            loadMore?()
+        }
     }
 }

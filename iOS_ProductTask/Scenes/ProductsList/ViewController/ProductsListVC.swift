@@ -9,7 +9,6 @@ import UIKit
 
 class ProductsListVC: UIViewController {
 
-    @IBOutlet weak var pic: UIImageView!
     @IBOutlet weak var productsListCV: UICollectionView! {
         didSet {
             configProductsListCV()
@@ -54,6 +53,12 @@ extension ProductsListVC: ProductsListViewProtocol {
     }
     
     func getError(error: Error) {
-        //hideIndicator()
+        print(error.localizedDescription)
+        hideIndicator()
+    }
+    
+    func loadMore() {
+        view.showActivityIndicator()
+        presenter.loadMore()
     }
 }
