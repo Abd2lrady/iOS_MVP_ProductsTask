@@ -29,21 +29,7 @@ class ProductsListVC: UIViewController {
 }
 
 extension ProductsListVC {
-    
-    func configProductsListCV() {
-        let cellNib = UINib(nibName: "\(ProductCVCell.self)",
-                            bundle: .main)
-        productsListCV.register(cellNib,
-                                forCellWithReuseIdentifier: ReuseID.ProductCell)
-        productsListCV.delegate = productsListCVDelegate
-        productsListCV.dataSource = productsListCVDataSource
-        let layout = productsListCV.collectionViewLayout
-        if let flowLayout = layout as? UICollectionViewFlowLayout {
-            flowLayout.estimatedItemSize = CGSize(width: 150, height: 500)
-        }
-        productsListCV.backgroundColor = .clear
-    }
-    
+
     func showIndicator() {
         DispatchQueue.main.async {
             self.view.showActivityIndicator()
@@ -62,6 +48,7 @@ extension ProductsListVC: ProductsListViewProtocol {
         productsListCVDataSource.products = presenter.products
         DispatchQueue.main.async {
             self.productsListCV.reloadData()
+            self.productsListCV.layoutSubviews()
             self.hideIndicator()
         }
     }

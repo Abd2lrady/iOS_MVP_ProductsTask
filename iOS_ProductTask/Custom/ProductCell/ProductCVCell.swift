@@ -12,11 +12,10 @@ class ProductCVCell: UICollectionViewCell {
     
     private var _product: Product! {
         didSet {
-            priceLabel.text = product.price?.description
+            priceLabel.text = "\(product.price?.description) $ "
             descriptionLabel.text = product.description
             img.loadImage(from: product.img?.url ?? "")
             imgHeight.constant = CGFloat(integerLiteral: product.img?.height ?? 300)
-            layoutSubviews()
         }
     }
     @IBOutlet weak var imgHeight: NSLayoutConstraint!
@@ -31,8 +30,8 @@ class ProductCVCell: UICollectionViewCell {
     }
     override func draw(_ rect: CGRect) {
         super.draw(rect)
-        contentView.setBorders(with: 5, color: .darkGray)
         contentView.setCorners(with: 5, corners: [.layerMaxXMaxYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMinXMinYCorner])
+        layoutSubviews()
     }
     var product: Product {
         get {
