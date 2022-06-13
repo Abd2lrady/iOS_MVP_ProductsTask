@@ -10,22 +10,25 @@ import UIKit
 
 class ProductDetailsPresenter {
     weak var view: ProductDetailsViewProtocol?
-    var product: Product!
+    let product: Product
     
-    init(view: ProductDetailsViewProtocol) {
+    init(view: ProductDetailsViewProtocol, product: Product) {
         self.view = view
+        self.product = product
     }
 }
 
 extension ProductDetailsPresenter: ProductDetailsPresenterProtocol {
     func viewLoaded() {
         var image: UIImage!
-        getProductImg { img in
+        getProductImg { [ weak self ] img in
             image = img ?? UIImage()
+            self?.view?.img.hideActivityIndicator()
+            self?.view?.setProductDetails(description: self?.product.description ?? "",
+                                    img: image)
+            
         }
         
-        view?.setProductDetails(description: product.description ?? "",
-                                img: image)
     }
 
     func getProductImg(completionHandler: @escaping (UIImage?) -> Void) {

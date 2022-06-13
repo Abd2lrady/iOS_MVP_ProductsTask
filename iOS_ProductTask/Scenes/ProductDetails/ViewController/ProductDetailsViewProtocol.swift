@@ -10,14 +10,21 @@ import UIKit
 
 protocol ProductDetailsViewProtocol: AnyObject {
     func setProductDetails(description: String, img: UIImage)
-    
+    var img: UIImageView { get set }
 }
 
 extension ProductDetailsVC: ProductDetailsViewProtocol{
     func setProductDetails(description: String, img: UIImage) {
-        self.img.image = img
+        self._img.image = img
         descriptionLabel.text = description
     }
     
+    var img: UIImageView {
+        get {
+            return self._img
+        } set {
+            self._img = newValue
+        }
+    }
     
 }
