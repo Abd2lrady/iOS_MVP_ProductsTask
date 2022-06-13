@@ -35,7 +35,7 @@ extension ProductsListPresenter: ProductsListPresenterProtocol {
                     print(error)
                 }
             case .success(let products):
-                print(products.count)
+                self?.products = products
                 self?.view?.productsFetched()
             }
         }

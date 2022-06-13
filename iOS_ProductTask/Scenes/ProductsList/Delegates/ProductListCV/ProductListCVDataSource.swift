@@ -31,7 +31,4 @@ extension ProductListCVDataSource: UICollectionViewDataSource {
         return cell
     }
     
-    
-    
-    
 }
