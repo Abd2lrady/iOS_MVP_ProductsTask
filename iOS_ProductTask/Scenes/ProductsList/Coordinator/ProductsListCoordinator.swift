@@ -42,7 +42,7 @@ extension ProductsListCoordinator: CoordinatorProtocol {
 extension ProductsListCoordinator: ProductsListCoordinatorProtocol {
     func navigateToProductDetails(for product: Product) {
         print(product)
-        let view = UIViewController()
+        let view = ProductDetailsVC()
         print("navigate to porduct details")
         router.push(view: view, animated: true)
     }

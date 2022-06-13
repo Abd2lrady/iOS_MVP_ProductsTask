@@ -41,23 +41,3 @@ extension ProductsListVC {
         }
     }
 }
-
-extension ProductsListVC: ProductsListViewProtocol {
-    func navigateToProductDetails(for product: Product) {
-        coordinator?.navigateToProductDetails(for: product)
-    }
-    
-    func productsFetched() {
-        productsListCVDataSource.products = presenter.products
-        DispatchQueue.main.async {
-            self.productsListCV.reloadData()
-            self.productsListCV.layoutSubviews()
-            self.hideIndicator()
-        }
-    }
-    
-    func getError(error: Error) {
-        print(error.localizedDescription)
-        hideIndicator()
-    }
-}

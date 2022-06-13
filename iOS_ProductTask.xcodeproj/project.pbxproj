@@ -27,6 +27,9 @@
 		B43F987628578B4700BF1E50 /* ProductImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43F987528578B4700BF1E50 /* ProductImageService.swift */; };
 		B43F987F2857C5B100BF1E50 /* ProductDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43F987D2857C5B100BF1E50 /* ProductDetailsVC.swift */; };
 		B43F98802857C5B100BF1E50 /* ProductDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B43F987E2857C5B100BF1E50 /* ProductDetailsVC.xib */; };
+		B43F98822857C7D700BF1E50 /* ProductDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43F98812857C7D700BF1E50 /* ProductDetailsPresenter.swift */; };
+		B43F98842857C7ED00BF1E50 /* ProductDetailsPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43F98832857C7ED00BF1E50 /* ProductDetailsPresenterProtocol.swift */; };
+		B43F98862857C87200BF1E50 /* ProductDetailsViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43F98852857C87200BF1E50 /* ProductDetailsViewProtocol.swift */; };
 		B441D1352854B55A0042181C /* ProductGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = B441D1342854B55A0042181C /* ProductGateway.swift */; };
 		B441D13C2854BDAD0042181C /* NetworkTargetProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B441D13B2854BDAD0042181C /* NetworkTargetProtocol.swift */; };
 		B441D1442854C0CC0042181C /* NetworkManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B441D1432854C0CC0042181C /* NetworkManger.swift */; };
@@ -75,6 +78,9 @@
 		B43F987528578B4700BF1E50 /* ProductImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImageService.swift; sourceTree = "<group>"; };
 		B43F987D2857C5B100BF1E50 /* ProductDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsVC.swift; sourceTree = "<group>"; };
 		B43F987E2857C5B100BF1E50 /* ProductDetailsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductDetailsVC.xib; sourceTree = "<group>"; };
+		B43F98812857C7D700BF1E50 /* ProductDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsPresenter.swift; sourceTree = "<group>"; };
+		B43F98832857C7ED00BF1E50 /* ProductDetailsPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsPresenterProtocol.swift; sourceTree = "<group>"; };
+		B43F98852857C87200BF1E50 /* ProductDetailsViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewProtocol.swift; sourceTree = "<group>"; };
 		B441D1342854B55A0042181C /* ProductGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductGateway.swift; sourceTree = "<group>"; };
 		B441D13B2854BDAD0042181C /* NetworkTargetProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTargetProtocol.swift; sourceTree = "<group>"; };
 		B441D1432854C0CC0042181C /* NetworkManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManger.swift; sourceTree = "<group>"; };
@@ -282,6 +288,8 @@
 		B43F98792857C53200BF1E50 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				B43F98812857C7D700BF1E50 /* ProductDetailsPresenter.swift */,
+				B43F98832857C7ED00BF1E50 /* ProductDetailsPresenterProtocol.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -291,6 +299,7 @@
 			children = (
 				B43F987D2857C5B100BF1E50 /* ProductDetailsVC.swift */,
 				B43F987E2857C5B100BF1E50 /* ProductDetailsVC.xib */,
+				B43F98852857C87200BF1E50 /* ProductDetailsViewProtocol.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -540,9 +549,11 @@
 				B441D16A285625E60042181C /* ProductsListPresenterProtocol.swift in Sources */,
 				B43F98712857410B00BF1E50 /* ProductListVC+ProductsListCV.swift in Sources */,
 				B4071B2E2853446900F6152C /* AppDelegate.swift in Sources */,
+				B43F98842857C7ED00BF1E50 /* ProductDetailsPresenterProtocol.swift in Sources */,
 				B441D177285690AF0042181C /* UIViewExtension+Design.swift in Sources */,
 				B4071B4B28534ECD00F6152C /* Router.swift in Sources */,
 				B441D13C2854BDAD0042181C /* NetworkTargetProtocol.swift in Sources */,
+				B43F98862857C87200BF1E50 /* ProductDetailsViewProtocol.swift in Sources */,
 				B4071B612853AA3B00F6152C /* Product.swift in Sources */,
 				B4071B532853505700F6152C /* AppCoordinator.swift in Sources */,
 				B441D16128561BA60042181C /* ScreenTitles.swift in Sources */,
@@ -560,6 +571,7 @@
 				B4071B302853446900F6152C /* SceneDelegate.swift in Sources */,
 				B441D16628561C8E0042181C /* ProductsListCoordinator.swift in Sources */,
 				B441D16E28562FD10042181C /* ProductsListCoordinatorProtocol.swift in Sources */,
+				B43F98822857C7D700BF1E50 /* ProductDetailsPresenter.swift in Sources */,
 				B441D1462854C6E40042181C /* NetworkError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
