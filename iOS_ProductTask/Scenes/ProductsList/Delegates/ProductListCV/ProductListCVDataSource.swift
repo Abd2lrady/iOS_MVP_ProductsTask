@@ -27,8 +27,17 @@ extension ProductListCVDataSource: UICollectionViewDataSource {
         else { fatalError("error deque cell \(ProductCVCell.self)") }
         
         cell.product = products[indexPath.row]
-        
+        cell.layoutIfNeeded()
         return cell
     }
+    
+}
+
+extension ProductListCVDataSource: AdaptiveUICollectionViewLayoutProtocol {
+    func collectionView(_ collectionView: UICollectionView, heightForPhotoAtIndexPath indexPath: IndexPath) -> CGFloat {
+            
+        return CGFloat(products[indexPath.item].img?.height ?? 500)
+    }
+    
     
 }

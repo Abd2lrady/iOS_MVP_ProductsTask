@@ -6,7 +6,8 @@
 //
 
 import Foundation
+import UIKit
 
-protocol AdaptiveUICollectionViewLayoutProtocol {
-    
+protocol AdaptiveUICollectionViewLayoutProtocol: AnyObject {
+    func collectionView(_ collectionView: UICollectionView, heightForPhotoAtIndexPath indexPath: IndexPath) -> CGFloat
 }

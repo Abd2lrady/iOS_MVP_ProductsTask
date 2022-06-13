@@ -8,21 +8,14 @@
 import UIKit
 
 extension ProductsListVC {
-    func configLayout() -> UICollectionViewLayout {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5),
-                                              heightDimension: .estimated(500))
-        let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        
-        item.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 2, bottom: 2, trailing: 2)
-        let groubSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
-                                               heightDimension: .estimated(500))
-        
-        let groub = NSCollectionLayoutGroup.horizontal(layoutSize: groubSize, subitem: item, count: 2)
-        
-        let section = NSCollectionLayoutSection(group: groub)
-        
-        return UICollectionViewCompositionalLayout(section: section)
+    func configLayout() -> UICollectionViewFlowLayout {
+        let layout = UICollectionViewFlowLayout()
+        let cellWidth = (UIScreen.main.bounds.width / 2) - 10
+        layout.estimatedItemSize = CGSize(width: cellWidth, height: 500)
+        layout.minimumInteritemSpacing = 2
+        return layout
     }
+    
     
     func configProductsListCV() {
         let cellNib = UINib(nibName: "\(ProductCVCell.self)",
@@ -31,8 +24,11 @@ extension ProductsListVC {
                                 forCellWithReuseIdentifier: ReuseID.ProductCell)
         productsListCV.delegate = productsListCVDelegate
         productsListCV.dataSource = productsListCVDataSource
-        let layout = configLayout()
-        productsListCV.collectionViewLayout = layout
+        
+        if let layout = productsListCV.collectionViewLayout as? AdaptiveUICollectionViewLayout {
+            layout.delegate = productsListCVDataSource
+        }
+
         productsListCV.backgroundColor = .clear
     }
     
