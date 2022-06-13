@@ -13,10 +13,13 @@ extension AppCoordinator: CoordinatorProtocol {
         
         let navigator = UINavigationController()
         let router = Router(navigator: navigator)
-        let viewController = ViewController()
         
-        router.push(view: viewController, animated: true)
-
+        let productsListCoordinator = ProductsListCoordinator(parentCoordinator: self,
+                                                              router: router)
+        childCoordinators.append(productsListCoordinator)
+        
+        productsListCoordinator.start()
+        
         window.rootViewController = navigator
         window.makeKeyAndVisible()
     }
