@@ -18,12 +18,18 @@ class ProductsListVC: UIViewController {
     weak var coordinator: ProductsListCoordinatorProtocol?
     lazy var productsListCVDelegate = ProductListCVDelegate()
     lazy var productsListCVDataSource = ProductListCVDataSource()
+    var navigationDelegate: TransitionDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         presenter.viewLoaded()
         showIndicator()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.delegate = navigationDelegate
     }
 }
 
@@ -39,25 +45,5 @@ extension ProductsListVC {
         DispatchQueue.main.async {
             self.view.hideActivityIndicator()
         }
-    }
-}
-
-extension ProductsListVC: ProductsListViewProtocol {
-    func navigateToProductDetails(for product: Product) {
-        coordinator?.navigateToProductDetails(for: product)
-    }
-    
-    func productsFetched() {
-        productsListCVDataSource.products = presenter.products
-        DispatchQueue.main.async {
-            self.productsListCV.reloadData()
-            self.productsListCV.layoutSubviews()
-            self.hideIndicator()
-        }
-    }
-    
-    func getError(error: Error) {
-        print(error.localizedDescription)
-        hideIndicator()
     }
 }

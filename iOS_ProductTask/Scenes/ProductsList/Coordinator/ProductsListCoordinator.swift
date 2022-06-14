@@ -32,19 +32,22 @@ extension ProductsListCoordinator: CoordinatorProtocol {
                                                           productService: productService)
         productsListVC.presenter = productsListPresenter
         
+        let transitionDelegate = TransitionDelegate()
+        productsListVC.navigationDelegate = transitionDelegate
 
         router.push(view: productsListVC,
                     animated: true)
-        
     }
 }
 
 extension ProductsListCoordinator: ProductsListCoordinatorProtocol {
     func navigateToProductDetails(for product: Product) {
-        print(product)
-        let view = UIViewController()
-        print("navigate to porduct details")
-        router.push(view: view, animated: true)
+        
+        let productDetailsCoordinator = ProductDetailsCoordinator(parentCoordinator: self,
+                                                                  router: router,
+                                                                  product: product)
+        childCoordinators.append(productDetailsCoordinator)
+        productDetailsCoordinator.start()
     }
 
     
