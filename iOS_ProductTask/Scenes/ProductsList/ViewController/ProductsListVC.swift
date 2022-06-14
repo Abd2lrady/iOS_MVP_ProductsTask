@@ -18,12 +18,18 @@ class ProductsListVC: UIViewController {
     weak var coordinator: ProductsListCoordinatorProtocol?
     lazy var productsListCVDelegate = ProductListCVDelegate()
     lazy var productsListCVDataSource = ProductListCVDataSource()
+    var navigationDelegate: TransitionDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         presenter.viewLoaded()
         showIndicator()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.delegate = navigationDelegate
     }
 }
 

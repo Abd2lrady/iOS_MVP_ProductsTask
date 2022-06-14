@@ -32,10 +32,11 @@ extension ProductsListCoordinator: CoordinatorProtocol {
                                                           productService: productService)
         productsListVC.presenter = productsListPresenter
         
+        let transitionDelegate = TransitionDelegate()
+        productsListVC.navigationDelegate = transitionDelegate
 
         router.push(view: productsListVC,
                     animated: true)
-        
     }
 }
 

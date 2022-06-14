@@ -13,9 +13,10 @@ class ProductDetailsVC: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     var presenter: ProductDetailsPresenterProtocol!
     var backButtonTapped: (() -> Void)?
+    var navigationDelegate: TransitionDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         _img.showActivityIndicator()
         presenter.viewLoaded()
         // Do any additional setup after loading the view.
@@ -23,6 +24,7 @@ class ProductDetailsVC: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        navigationController?.delegate = navigationDelegate
         configNavBar()
     }
     

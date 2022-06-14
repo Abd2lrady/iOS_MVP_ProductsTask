@@ -27,6 +27,10 @@ extension ProductDetailsCoordinator: CoordinatorProtocol {
         let presenter = ProductDetailsPresenter(view: view, product: product)
         view.presenter = presenter
         view.backButtonTapped = backToProductsList
+        
+        let transitionDelegate = TransitionDelegate()
+        view.navigationDelegate = transitionDelegate
+
         router.push(view: view, animated: true)
     }
     
