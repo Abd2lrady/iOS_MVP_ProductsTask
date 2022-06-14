@@ -27,7 +27,9 @@ extension ProductsListCoordinator: CoordinatorProtocol {
         let productsListVC = ProductsListVC()
         productsListVC.coordinator = self
         productsListVC.title = ScreenTitles.productList
-        let productService: ProductGateway = RemoteProductService()
+//        let productService: ProductGateway = RemoteProductService()
+          let productService: ProductGateway = ProductService()
+
         let productsListPresenter = ProductsListPresenter(view: productsListVC,
                                                           productService: productService)
         productsListVC.presenter = productsListPresenter

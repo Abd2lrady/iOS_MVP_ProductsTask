@@ -45,6 +45,9 @@ extension ProductsListPresenter: ProductsListPresenterProtocol {
                 case .parse(let error):
                     print("catched parse error")
                     print(error)
+                case .unknown(let error):
+                    print("catched unknown error")
+                    print(error)
                 }
             case .success(let products):
                 self?.products.append(contentsOf: products)

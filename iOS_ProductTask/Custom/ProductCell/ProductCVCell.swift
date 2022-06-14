@@ -14,7 +14,7 @@ class ProductCVCell: UICollectionViewCell {
         didSet {
             priceLabel.text = "\(product.price?.description ?? "N/A") $ "
             descriptionLabel.text = product.description
-            imgHeight.constant = CGFloat(integerLiteral: product.img?.height ?? 300)
+            imgHeight.constant = CGFloat(integerLiteral: Int(product.img?.height ?? 300))
         }
     }
     @IBOutlet weak var imgHeight: NSLayoutConstraint!

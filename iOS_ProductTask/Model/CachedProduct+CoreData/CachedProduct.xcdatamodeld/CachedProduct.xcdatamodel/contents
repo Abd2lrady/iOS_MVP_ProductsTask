@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CachedProduct" representedClassName="CachedProduct" syncable="YES">
+        <attribute name="price" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="productDescription" optional="YES" attributeType="String"/>
+        <attribute name="productID" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="img" maxCount="1" deletionRule="Nullify" destinationEntity="ProductImage"/>
+    </entity>
+    <entity name="ProductImage" representedClassName="ProductImage" syncable="YES">
+        <attribute name="height" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="url" attributeType="String"/>
+        <attribute name="width" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <elements>
+        <element name="CachedProduct" positionX="-300.1171875" positionY="-113.984375" width="128" height="103"/>
+        <element name="ProductImage" positionX="-61.64453125" positionY="-1.10546875" width="128" height="88"/>
+    </elements>
+</model>

@@ -8,5 +8,5 @@
 import Foundation
 
 protocol ProductGateway {
-    func getProducts(completionHandler: @escaping(Result<[Product], ProductServiceError>) -> Void) 
+    func getProducts(completionHandler: @escaping(Result<[Product], ProductServiceError>) -> Void)
 }

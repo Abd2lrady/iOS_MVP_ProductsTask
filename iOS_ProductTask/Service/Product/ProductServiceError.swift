@@ -10,4 +10,5 @@ import Foundation
 enum ProductServiceError: Error {
     case network(NetworkError)
     case parse(Error)
+    case unknown(Error)
 }

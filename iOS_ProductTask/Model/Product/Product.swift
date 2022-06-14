@@ -22,7 +22,8 @@ struct Product: Codable {
 }
 
 struct Img: Codable {
-    let width, height: Int?
+    let width: Double?
+    let height: Double?
     let url: String
 }
 
