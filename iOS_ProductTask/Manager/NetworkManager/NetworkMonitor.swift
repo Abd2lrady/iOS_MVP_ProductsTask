@@ -1,21 +1,19 @@
+import SystemConfiguration
+
 class NetworkMonitor {
     
     static let shared = NetworkMonitor()
-    private init() { }
+    private init() {
+
+    }
+
+    
+    let reachability = SCNetworkReachabilityCreateWithName(nil, "localhost")
+    var flags = SCNetworkReachabilityFlags()
     
     var isConnected: Bool {
-        do {
-            let reachability = try Reachability()
-            let status = reachability.connection
-            switch status {
-            case.unavailable:
-                return false
-            case .cellular, .wifi:
-                return true
-            }
-        } catch {
-            print("error with reachability")
-            return false
-        }
+        SCNetworkReachabilityGetFlags(reachability!, &flags)
+        return flags.contains(.reachable)
     }
 }
+
