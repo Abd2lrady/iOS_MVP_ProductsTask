@@ -1,12 +1,13 @@
-//  Created by dasdom on 15.01.21.
-//  
+//
+//  TransitionDelegate.swift
+//  iOS_ProductTask
+//
+//  Created by Ahmad Abdulrady
 //
 
 import UIKit
 
 class TransitionDelegate: NSObject, UINavigationControllerDelegate {
-  
-  var interactiveTransition: UIPercentDrivenInteractiveTransition?
   
   func navigationController(_ navigationController: UINavigationController,
                             animationControllerFor operation: UINavigationController.Operation,
