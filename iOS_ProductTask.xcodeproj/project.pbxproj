@@ -63,6 +63,7 @@
 		B441D17E2856A72E0042181C /* UIView+ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B441D17D2856A72E0042181C /* UIView+ActivityIndicator.swift */; };
 		B45F0FE32858E86E00BD4910 /* LocalProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45F0FE22858E86E00BD4910 /* LocalProductService.swift */; };
 		B4921F34286B0B8400FAAE6E /* ProductsListVCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4921F33286B0B8400FAAE6E /* ProductsListVCTest.swift */; };
+		B4921F36286B196900FAAE6E /* ProductDetailsVCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4921F35286B196900FAAE6E /* ProductDetailsVCTest.swift */; };
 		B496DEA328591452001573E2 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B496DEA228591452001573E2 /* NetworkMonitor.swift */; };
 		B496DEAD285924C0001573E2 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B496DEAC285924BF001573E2 /* Reachability.swift */; };
 		B496DEB02859297E001573E2 /* CachedProduct+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B496DEAE2859297E001573E2 /* CachedProduct+CoreDataClass.swift */; };
@@ -139,6 +140,7 @@
 		B441D17D2856A72E0042181C /* UIView+ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ActivityIndicator.swift"; sourceTree = "<group>"; };
 		B45F0FE22858E86E00BD4910 /* LocalProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalProductService.swift; sourceTree = "<group>"; };
 		B4921F33286B0B8400FAAE6E /* ProductsListVCTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsListVCTest.swift; sourceTree = "<group>"; };
+		B4921F35286B196900FAAE6E /* ProductDetailsVCTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsVCTest.swift; sourceTree = "<group>"; };
 		B496DEA228591452001573E2 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		B496DEAC285924BF001573E2 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		B496DEAE2859297E001573E2 /* CachedProduct+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CachedProduct+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -583,6 +585,7 @@
 			isa = PBXGroup;
 			children = (
 				B4921F33286B0B8400FAAE6E /* ProductsListVCTest.swift */,
+				B4921F35286B196900FAAE6E /* ProductDetailsVCTest.swift */,
 			);
 			path = iOS_ProductTaskTests;
 			sourceTree = "<group>";
@@ -754,6 +757,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4921F34286B0B8400FAAE6E /* ProductsListVCTest.swift in Sources */,
+				B4921F36286B196900FAAE6E /* ProductDetailsVCTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
