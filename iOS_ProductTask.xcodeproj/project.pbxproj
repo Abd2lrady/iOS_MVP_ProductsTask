@@ -62,12 +62,23 @@
 		B441D17C2856985B0042181C /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B441D17B2856985B0042181C /* ImageCacheManager.swift */; };
 		B441D17E2856A72E0042181C /* UIView+ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B441D17D2856A72E0042181C /* UIView+ActivityIndicator.swift */; };
 		B45F0FE32858E86E00BD4910 /* LocalProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45F0FE22858E86E00BD4910 /* LocalProductService.swift */; };
+		B4921F34286B0B8400FAAE6E /* ProductsListVCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4921F33286B0B8400FAAE6E /* ProductsListVCTest.swift */; };
 		B496DEA328591452001573E2 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B496DEA228591452001573E2 /* NetworkMonitor.swift */; };
 		B496DEAD285924C0001573E2 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B496DEAC285924BF001573E2 /* Reachability.swift */; };
 		B496DEB02859297E001573E2 /* CachedProduct+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B496DEAE2859297E001573E2 /* CachedProduct+CoreDataClass.swift */; };
 		B496DEB12859297E001573E2 /* CachedProduct+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B496DEAF2859297E001573E2 /* CachedProduct+CoreDataProperties.swift */; };
 		B4AD11DC2858F9A1004F64F6 /* CachedProduct.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B4AD11DA2858F9A1004F64F6 /* CachedProduct.xcdatamodeld */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B4D503F228620B9F00743897 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B4071B222853446900F6152C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B4071B292853446900F6152C;
+			remoteInfo = iOS_ProductTask;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		B4071B2A2853446900F6152C /* iOS_ProductTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_ProductTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,15 +138,24 @@
 		B441D17B2856985B0042181C /* ImageCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
 		B441D17D2856A72E0042181C /* UIView+ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ActivityIndicator.swift"; sourceTree = "<group>"; };
 		B45F0FE22858E86E00BD4910 /* LocalProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalProductService.swift; sourceTree = "<group>"; };
+		B4921F33286B0B8400FAAE6E /* ProductsListVCTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsListVCTest.swift; sourceTree = "<group>"; };
 		B496DEA228591452001573E2 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		B496DEAC285924BF001573E2 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		B496DEAE2859297E001573E2 /* CachedProduct+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CachedProduct+CoreDataClass.swift"; sourceTree = "<group>"; };
 		B496DEAF2859297E001573E2 /* CachedProduct+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CachedProduct+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B4AD11DB2858F9A1004F64F6 /* CachedProduct.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CachedProduct.xcdatamodel; sourceTree = "<group>"; };
+		B4D503EE28620B9F00743897 /* iOS_ProductTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOS_ProductTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		B4071B272853446900F6152C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4D503EB28620B9F00743897 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -149,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				B4071B2C2853446900F6152C /* iOS_ProductTask */,
+				B4D503EF28620B9F00743897 /* iOS_ProductTaskTests */,
 				B4071B2B2853446900F6152C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -157,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				B4071B2A2853446900F6152C /* iOS_ProductTask.app */,
+				B4D503EE28620B9F00743897 /* iOS_ProductTaskTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -557,6 +579,14 @@
 			path = LocalProduct;
 			sourceTree = "<group>";
 		};
+		B4D503EF28620B9F00743897 /* iOS_ProductTaskTests */ = {
+			isa = PBXGroup;
+			children = (
+				B4921F33286B0B8400FAAE6E /* ProductsListVCTest.swift */,
+			);
+			path = iOS_ProductTaskTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -577,6 +607,24 @@
 			productReference = B4071B2A2853446900F6152C /* iOS_ProductTask.app */;
 			productType = "com.apple.product-type.application";
 		};
+		B4D503ED28620B9F00743897 /* iOS_ProductTaskTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4D503F628620B9F00743897 /* Build configuration list for PBXNativeTarget "iOS_ProductTaskTests" */;
+			buildPhases = (
+				B4D503EA28620B9F00743897 /* Sources */,
+				B4D503EB28620B9F00743897 /* Frameworks */,
+				B4D503EC28620B9F00743897 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B4D503F328620B9F00743897 /* PBXTargetDependency */,
+			);
+			name = iOS_ProductTaskTests;
+			productName = iOS_ProductTaskTests;
+			productReference = B4D503EE28620B9F00743897 /* iOS_ProductTaskTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -589,6 +637,11 @@
 				TargetAttributes = {
 					B4071B292853446900F6152C = {
 						CreatedOnToolsVersion = 13.3;
+					};
+					B4D503ED28620B9F00743897 = {
+						CreatedOnToolsVersion = 13.3;
+						LastSwiftMigration = 1330;
+						TestTargetID = B4071B292853446900F6152C;
 					};
 				};
 			};
@@ -606,6 +659,7 @@
 			projectRoot = "";
 			targets = (
 				B4071B292853446900F6152C /* iOS_ProductTask */,
+				B4D503ED28620B9F00743897 /* iOS_ProductTaskTests */,
 			);
 		};
 /* End PBXProject section */
@@ -620,6 +674,13 @@
 				B4071B3A2853446A00F6152C /* LaunchScreen.storyboard in Resources */,
 				B441D153285609DE0042181C /* ProductsListVC.xib in Resources */,
 				B4071B372853446A00F6152C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4D503EC28620B9F00743897 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -688,7 +749,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B4D503EA28620B9F00743897 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4921F34286B0B8400FAAE6E /* ProductsListVCTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B4D503F328620B9F00743897 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B4071B292853446900F6152C /* iOS_ProductTask */;
+			targetProxy = B4D503F228620B9F00743897 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B4071B382853446A00F6152C /* LaunchScreen.storyboard */ = {
@@ -868,6 +945,53 @@
 			};
 			name = Release;
 		};
+		B4D503F428620B9F00743897 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Abd2lrady.iOS-ProductTaskTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS_ProductTask.app/iOS_ProductTask";
+			};
+			name = Debug;
+		};
+		B4D503F528620B9F00743897 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Abd2lrady.iOS-ProductTaskTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS_ProductTask.app/iOS_ProductTask";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -885,6 +1009,15 @@
 			buildConfigurations = (
 				B4071B3F2853446A00F6152C /* Debug */,
 				B4071B402853446A00F6152C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B4D503F628620B9F00743897 /* Build configuration list for PBXNativeTarget "iOS_ProductTaskTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4D503F428620B9F00743897 /* Debug */,
+				B4D503F528620B9F00743897 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
