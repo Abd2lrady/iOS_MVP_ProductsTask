@@ -25,7 +25,6 @@
 		B42D8DE52858A7D500163509 /* AppDelegate + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42D8DE42858A7D500163509 /* AppDelegate + Extension.swift */; };
 		B42D8DE82858A84B00163509 /* ModelNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42D8DE72858A84B00163509 /* ModelNames.swift */; };
 		B43C26A0286E2DE1008F7C0C /* NetworkManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43C269F286E2DE1008F7C0C /* NetworkManagerTest.swift */; };
-		B43C26A2286E4D01008F7C0C /* NetworkTargetProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B441D13B2854BDAD0042181C /* NetworkTargetProtocol.swift */; };
 		B43F986D285739CD00BF1E50 /* AdaptiveUICollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43F986C285739CD00BF1E50 /* AdaptiveUICollectionViewLayout.swift */; };
 		B43F986F28573B0200BF1E50 /* AdaptiveUICollectionViewLayoutProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43F986E28573B0200BF1E50 /* AdaptiveUICollectionViewLayoutProtocol.swift */; };
 		B43F98712857410B00BF1E50 /* ProductListVC+ProductsListCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43F98702857410B00BF1E50 /* ProductListVC+ProductsListCV.swift */; };
@@ -761,7 +760,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B43C26A0286E2DE1008F7C0C /* NetworkManagerTest.swift in Sources */,
-				B43C26A2286E4D01008F7C0C /* NetworkTargetProtocol.swift in Sources */,
 				B4921F34286B0B8400FAAE6E /* ProductsListVCTest.swift in Sources */,
 				B4921F36286B196900FAAE6E /* ProductDetailsVCTest.swift in Sources */,
 			);

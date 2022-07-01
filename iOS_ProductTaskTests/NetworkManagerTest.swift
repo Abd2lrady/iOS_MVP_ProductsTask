@@ -34,7 +34,7 @@ class NetworkManagerTest: XCTestCase {
         
         var serverData: Data?
         let validDataExpected = expectation(description: "ValidData")
-        sut.request(target: ProductTarget.getProducts) { result in
+        sut.request(target: DummyTarget.dummyCase) { result in
             switch result {
             case .success(let data):
                 serverData = data
@@ -66,7 +66,7 @@ class NetworkManagerTest: XCTestCase {
         var serverError: Error?
         let errorExpected = expectation(description: "error")
 
-        sut.request(target: ProductTarget.getProducts) { result in
+        sut.request(target: DummyTarget.dummyCase) { result in
             switch result {
             case .success:
                 serverError = nil
@@ -82,8 +82,7 @@ class NetworkManagerTest: XCTestCase {
         }
         
     }
-    
-    
+
 }
 
 
@@ -98,8 +97,8 @@ enum DummyTarget: NetworkTargetProtocol {
     var path: String { return "/anyPath" }
     
     var method: NetworkRequestMethod { return .get }
-    
 }
+
 
 struct RequestResultStub {
     let data: Data?
