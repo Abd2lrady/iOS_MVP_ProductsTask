@@ -12,7 +12,8 @@ extension AppCoordinator: CoordinatorProtocol {
     func start() {
         
         let navigator = UINavigationController()
-        let router = Router(navigator: navigator)
+        let navigatorDelegate = TransitionDelegate()
+        let router = Router(navigator: navigator, navigatorDelegate: navigatorDelegate)
         
         let productsListCoordinator = ProductsListCoordinator(parentCoordinator: self,
                                                               router: router)

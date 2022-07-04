@@ -9,10 +9,13 @@ import UIKit
 
 class Router {
     
-    var navigator: UINavigationController
-    
-    init(navigator: UINavigationController) {
+    let navigator: UINavigationController
+    let navigatorDelegate: UINavigationControllerDelegate?
+    init(navigator: UINavigationController,
+         navigatorDelegate: UINavigationControllerDelegate?) {
         self.navigator = navigator
+        self.navigatorDelegate = navigatorDelegate
+        navigator.delegate = navigatorDelegate
     }
     
 }
